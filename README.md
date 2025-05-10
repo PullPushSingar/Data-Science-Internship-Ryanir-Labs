@@ -36,7 +36,6 @@ It demonstrates the full **data science pipeline**, from exploratory data analys
 - `FlownPassengers`
 - `FlightBagsWeight`
 - `BagsCount`
-- (optionally: route/airport data as categorical features)
 
 ---
 
