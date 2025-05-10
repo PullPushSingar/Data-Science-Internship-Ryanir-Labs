@@ -1,28 +1,80 @@
-# Ryanair Take-Off Weight Prediction
+# ✈️ Ryanair Take-Off Weight Prediction
 
-This project aims to build a regression model for predicting the Take-Off Weight (TOW) of Ryanair flights based on historical flight data.
+This project aims to build a regression model for predicting the **Take-Off Weight (TOW)** of Ryanair flights based on operational flight data.
 
-The dataset includes features such as departure date, actual flight time, number of passengers, baggage count and weight, and other operational parameters. Based on these features, the model learns to estimate the TOW, which can be useful for operational planning, fuel consumption optimization, and logistics analysis.
-
-The project serves as a practical example of:
-- applying regression modeling to real-world aviation data,
-- performing exploratory data analysis (EDA),
-- developing and evaluating machine learning models for business-related use cases.
-
-The goal is not only to achieve accurate predictions but also to demonstrate a full data science workflow including data analysis, modeling, evaluation, and result presentation.
+It demonstrates the full **data science pipeline**, from exploratory data analysis to preprocessing and model evaluation using multiple approaches to outlier handling.
 
 ---
 
-## 🔧 Project Environment
+## 📁 Project Structure
 
-This project was developed using **Python 3.10**.  
-It is recommended to use a virtual environment via [Anaconda](https://www.anaconda.com/) to manage dependencies.
+```
+.
+├── data/                      # Raw and processed CSV data
+│   ├── training.csv
+│   ├── validation.csv
+│   └── processed/             # Cleaned, winsorized, and IQR-based datasets
+├── notebooks/                
+│   ├── EDA/                   # Exploratory Data Analysis
+│   │   └── EDA_visualization.ipynb
+│   ├── DataPreprocessing/    # Data cleaning and outlier handling
+│   │   ├── cleaning_missing_data.ipynb
+│   │   ├── outlier_remobal_iqr.ipynb
+│   │   └── winsorization.ipynb
+│   └── Models/               # Model training and comparison
+│       └── model_trainng_comprasion.ipynb
+├── requirements.txt
+└── README.md
+```
 
-### 🐍 Create and activate the environment:
+---
+
+## 📊 Features used for prediction
+
+- `ActualFlightTime`
+- `ActualTotalFuel`
+- `FlownPassengers`
+- `FlightBagsWeight`
+- `BagsCount`
+- (optionally: route/airport data as categorical features)
+
+---
+
+## 🚀 Steps completed
+
+- Exploratory Data Analysis (EDA)
+- Handling missing values
+- Outlier treatment:
+  - Baseline (no outlier handling)
+  - IQR-based outlier removal
+  - Winsorization
+- Linear regression model training and performance comparison (RMSE, MAE)
+
+---
+
+## 🔧 Environment Setup
+
+This project uses **Python 3.10**.  
+We recommend managing dependencies using [Anaconda](https://www.anaconda.com/).
+
+### ✅ Create and activate environment
 
 ```bash
 conda create -n ryanair_regression python=3.10
 conda activate ryanair_regression
 pip install -r requirements.txt
+```
 
+---
 
+## 📈 Planned Extensions
+
+- Add Ridge, Lasso, and XGBoost regressors
+- Residuals analysis
+- Feature engineering for route/airport data
+
+---
+
+## 👨‍💻 Author
+
+Prepared as part of a recruitment task for **Ryanair Labs — Data Science Internship**.
