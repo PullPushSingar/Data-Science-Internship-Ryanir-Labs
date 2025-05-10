@@ -65,16 +65,9 @@ conda activate ryanair_regression
 pip install -r requirements.txt
 ```
 
----
 
-## 📈 Planned Extensions
 
-- Add Ridge, Lasso, and XGBoost regressors
-- Residuals analysis
-- Feature engineering for route/airport data
-
----
-
-## 👨‍💻 Author
+## 👨‍💻 Author - Hubert Kowalczyk
 
 Prepared as part of a recruitment task for **Ryanair Labs — Data Science Internship**.
+
